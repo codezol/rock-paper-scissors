@@ -1,0 +1,295 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: radial-gradient(hsl(214, 47%, 23%) , hsl(237, 49%, 15%));
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 600;
+}
+.rulesContainer{
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+}
+.rules {
+  
+  background-color: #fff;
+  width: fit-content;
+  padding: 1.5rem;
+  border-radius: 10px;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.rules .rules-img {
+  width: 15rem;
+}
+.rules div {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.rules div h3 {
+  color: hsl(229, 25%, 31%);
+  margin-top: -1.8rem;
+  font-size: 1.8rem;
+  padding-top:1rem ;
+  
+}
+.hide{
+  display: none;
+}
+.rules div span {
+  margin-top: -1.3rem;
+  padding-bottom: 1.8rem;
+  padding-top:1rem ;
+}
+.App{
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.circle{
+  background-color: #fff;
+  width: 8rem;
+  padding: 2rem;
+  border-radius: 50%;
+  height: 8rem;
+  box-shadow: #999 0px 5px 3px 1px inset;
+}
+.rock, .scissors, .paper {
+  
+width: 10.5rem;
+height: 10.5rem;
+border-radius: 50%;
+display: grid;
+place-content: center;
+cursor: pointer;
+}
+.rock{
+  background-image: linear-gradient(hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
+  box-shadow: hsl(349, 50%, 36%)  0px -7px 1px 1px inset;
+  margin-inline: auto;
+}
+.scissors{
+  margin-right: -11px;
+  background-image: linear-gradient(hsl(39, 89%, 49%) , hsl(40, 84%, 53%));
+  box-shadow: hsl(39, 55%, 34%)  0px -7px 1px 1px inset;
+}
+.paper {
+  
+  background-image: linear-gradient(hsl(230, 89%, 62%) , hsl(230, 89%, 65%));
+  margin-inline:auto ;
+  box-shadow: hsl(230, 47%, 41%) 0px -7px 1px 1px inset;
+}
+.paper  {
+  margin: 0;
+}
+.upper-row{
+  display: flex;
+  justify-content: space-between;
+}
+.game-tools-container{
+  width: 26rem;
+  background-image: url("./images/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: 10%;
+  background-repeat: no-repeat;
+background-position: 50% bottom;
+margin-inline:auto;
+}
+.rules-button {
+  background-color: transparent;
+color: #fff;
+border: 2px solid  hsl(217, 16%, 45%);;
+font-size: 1rem;
+padding: 6px 28px;
+border-radius: 8px;
+position: absolute;
+bottom: 3%;
+right: 3%;
+}
+.score-block {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid hsl(217, 16%, 45%);
+  padding: 1rem;
+  border-radius: 10px;
+  color: #FFF;
+  width: 55%;
+margin-inline: auto;
+}
+.score {
+  background-color: #fafafa;
+  width: 8rem;
+  border-radius: 10px;
+}
+.score div {
+  color: hsl(229, 64%, 46%);
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 0.8rem;
+}
+.score span {
+  
+    color: hsl(229, 25%, 31%);
+    font-size: 4rem;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    margin-top: -8px;
+}
+.bickedTool .circle{
+  width: 12rem;
+  height: 12rem;
+  padding: 3rem;
+}
+.bickedTool .rock, .bickedTool .paper, .bickedTool .scissors{
+  width: 15.5rem;
+  height: 15.5rem;  
+}
+.bickedTool{
+  display: flex;
+  justify-content: space-between;
+  width: 60vw;
+  color: #fff;
+  margin-inline: auto;
+}
+h2{
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+.empty-house-tool{
+    background-color: hsl(240, 35.5%, 18.2%) ;
+    width: 12rem;
+    border-radius: 50%;
+    height: 12rem;
+    margin-top: 1.7rem;
+  }
+.play-again {
+  color: hsl(240, 35.5%, 18.2%);
+  font-size: 0.95rem;
+  font-weight: 500;
+  width: 12rem;
+  height: 2.5rem;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+.play-again:hover {
+  color: hsl(349, 71%, 52%);
+}
+.playing-stauts h1{
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+
+}
+.playing-stauts{
+  margin-top: 6rem;
+  z-index: 1;
+}
+
+.winner{
+  
+  box-shadow: 0 0 0 40px transparent, 0 0 0 80px #232c4b, 0 0 0 130px #1e2949;
+  border-radius: 50%;
+  z-index: -3;
+}
+@media  screen and (max-width: 375px) {
+  .rules {
+    width: 100%;
+    height: 100%;
+    top:50%;
+    display: grid;
+    place-content: center;
+  }
+  .rules span {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+  }
+  .rules .rules-img{
+    margin: 10rem auto;
+    width: 100%;
+  }
+  .rock, .paper, .scissors {
+    width: 9rem;
+    height: 9rem;
+  }
+  .circle{
+    width: 8rem;
+    height: 8rem;
+  }
+  .game-tools-container {
+    width: 20rem;
+    background-size: 17rem;
+    margin-bottom: 3rem;
+  }
+  .rules-button {
+    left: 50%;
+    transform: translate(-50%,-50%);
+    bottom: 0;
+  }
+  .score-block{
+    width: 80%;
+    padding: 0.5rem;
+  }
+  .score-block .names {
+    font-size: 0.75rem;
+  }
+  .score{
+    width: 6rem;
+  }
+  .score span {
+    font-size: 3.3rem;
+  }
+  .bickedTool .circle {
+    width: 7.5rem;
+    height: 7.5rem;
+    padding: 2rem;
+  }
+  .bickedTool .rock, .bickedTool .paper, .bickedTool .scissors {
+    width: 8.5rem;
+    height: 8.5rem;
+  }
+  .empty-house-tool{
+    width: 7.5rem;
+    height: 7.5rem;
+    margin: 0.8rem;
+  }
+  .playing-stauts{
+    position: fixed;
+    bottom: 15%;
+    left: 33%;
+  }
+  /* .the-house{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1rem;
+  } */
+  .bickedTool{
+    width: 90%;
+    margin-inline: auto;
+    margin-bottom: 15rem;
+  }
+  .the-house .the-house{
+    display: flex;
+justify-content: flex-end;
+  }
+  h2{
+    font-size: 1.2rem;
+  }
+  .playing-stauts h1{
+    font-size: 2rem;
+  }
+  .play-again{
+    width: 8rem;
+  }
+}
